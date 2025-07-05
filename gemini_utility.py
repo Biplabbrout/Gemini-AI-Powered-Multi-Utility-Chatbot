@@ -1,6 +1,7 @@
 import os
 import json
 from PIL import Image
+import streamlit as st
 
 import google.generativeai as genai
 
@@ -9,10 +10,13 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 
 # path of config_data file
 config_file_path = f"{working_dir}/config.json"
-config_data = json.load(open("config.json"))
+#config_data = json.load(open("config.json"))
 
 # loading the GOOGLE_API_KEY
-GOOGLE_API_KEY = config_data["GOOGLE_API_KEY"]
+#GOOGLE_API_KEY = config_data["GOOGLE_API_KEY"]
+import streamlit as st
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+
 
 # configuring google.generativeai with API key
 genai.configure(api_key=GOOGLE_API_KEY)
