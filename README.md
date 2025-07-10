@@ -28,6 +28,8 @@ Clone the repository
 Install dependencies using pip install -r requirements.txt
 
 Add your GOOGLE_API_KEY in config.json
+LINK-https://gemini-ai-powered-multi-utility.streamlit.app/
+
 
 Run the app using:
 
